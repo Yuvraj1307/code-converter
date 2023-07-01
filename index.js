@@ -5,7 +5,7 @@ const cors=require("cors")
 const app = express();
 app.use(cors({origin:"*"}))
 app.use(bodyParser.json());
-
+require("dotenv").config()
 
 
 app.get("/",(req,res)=>{
@@ -23,7 +23,7 @@ console.log(code, targetLanguage )
     n: 1
   }, {
     headers: {
-      'Authorization': `Bearer  `,
+      'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
       'Content-Type': 'application/json'
     }
   });
@@ -45,7 +45,7 @@ app.post('/debug',async (req, res) => {
         n: 1
       }, {
         headers: {
-          'Authorization': `Bearer  `,
+          'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
           'Content-Type': 'application/json'
         }
       });
@@ -67,7 +67,7 @@ app.post('/check',async (req, res) => {
         n: 1
       }, {
         headers: {
-          'Authorization': `Bearer  `,
+          'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
           'Content-Type': 'application/json'
         }
       });
