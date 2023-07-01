@@ -23,7 +23,7 @@ console.log(code, targetLanguage )
     n: 1
   }, {
     headers: {
-      'Authorization': `Bearer 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`,
+      'Authorization': `Bearer  `,
       'Content-Type': 'application/json'
     }
   });
@@ -45,7 +45,7 @@ app.post('/debug',async (req, res) => {
         n: 1
       }, {
         headers: {
-          'Authorization': `Bearer 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`,
+          'Authorization': `Bearer  `,
           'Content-Type': 'application/json'
         }
       });
@@ -67,7 +67,7 @@ app.post('/check',async (req, res) => {
         n: 1
       }, {
         headers: {
-          'Authorization': `Bearer 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`,
+          'Authorization': `Bearer  `,
           'Content-Type': 'application/json'
         }
       });
